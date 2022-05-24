@@ -1,0 +1,90 @@
+<h2>Data Roles</h2>
+<p>All the roles created for your plan.</p>
+<button mat-raised-button>Create New Role
+  <mat-icon aria-label="add_circle_outline">add_circle_outline</mat-icon>
+</button>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- RoleName Column -->
+  <ng-container matColumnDef="RoleName">
+    <th mat-header-cell *matHeaderCellDef> RoleName </th>
+    <td mat-cell *matCellDef="let element"> {{element.RoleName}} </td>
+  </ng-container>
+
+  <!-- Active Column -->
+  <ng-container matColumnDef="Active">
+    <th mat-header-cell *matHeaderCellDef>Active</th>
+    <td mat-cell *matCellDef="let element"> {{element.Active}} </td>
+  </ng-container>
+
+  <!-- AuditRecInsertBy Column -->
+  <ng-container matColumnDef="AuditRecInsertBy">
+    <th mat-header-cell *matHeaderCellDef> AuditRecInsertBy </th>
+    <td mat-cell *matCellDef="let element"> {{element.AuditRecInsertBy}} </td>
+  </ng-container>
+
+  <!-- AuditRecInsertDate Column -->
+  <ng-container matColumnDef="AuditRecInsertDate">
+    <th mat-header-cell *matHeaderCellDef> AuditRecInsertDate </th>
+    <td mat-cell *matCellDef="let element"> {{element.AuditRecInsertDate}} </td>
+  </ng-container>
+
+  <!-- AuditRecUpDate Column -->
+  <ng-container matColumnDef="AuditRecUpDate">
+    <th mat-header-cell *matHeaderCellDef> AuditRecUpDate </th>
+    <td mat-cell *matCellDef="let element"> {{element.AuditRecUpDate}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="AuditRecUpdby">
+    <th mat-header-cell *matHeaderCellDef> AuditRecUpdby </th>
+    <td mat-cell *matCellDef="let element"> {{element.AuditRecUpdby}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="AuditRecUpdBy">
+    <th mat-header-cell *matHeaderCellDef> AuditRecUpdBy </th>
+    <td mat-cell *matCellDef="let element"> {{element.AuditRecUpdBy}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="AuditRecUpdDate">
+    <th mat-header-cell *matHeaderCellDef> AuditRecUpdDate </th>
+    <td mat-cell *matCellDef="let element"> {{element.AuditRecUpdDate}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="EffectiveDate">
+    <th mat-header-cell *matHeaderCellDef> EffectiveDate </th>
+    <td mat-cell *matCellDef="let element"> {{element.EffectiveDate}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="Env">
+    <th mat-header-cell *matHeaderCellDef> Env </th>
+    <td mat-cell *matCellDef="let element"> {{element.Env}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="InactiveDate">
+    <th mat-header-cell *matHeaderCellDef> InactiveDate </th>
+    <td mat-cell *matCellDef="let element"> {{element.InactiveDate}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="LHCode">
+    <th mat-header-cell *matHeaderCellDef> LHCode </th>
+    <td mat-cell *matCellDef="let element"> {{element.LHCode}} </td>
+  </ng-container>
+    
+  <ng-container matColumnDef="LHEntityCode">
+    <th mat-header-cell *matHeaderCellDef> LHEntityCode </th>
+    <td mat-cell *matCellDef="let element"> {{element.LHEntityCode}} </td>
+  </ng-container>
+    
+  <ng-container matColumnDef="Roleid">
+    <th mat-header-cell *matHeaderCellDef> Roleid </th>
+    <td mat-cell *matCellDef="let element"> {{element.Roleid}} </td>
+  </ng-container>
+    
+  <ng-container matColumnDef="RoleInfo">
+    <th mat-header-cell *matHeaderCellDef> RoleInfo </th>
+    <td mat-cell *matCellDef="let element"> {{element.RoleInfo}} </td>
+  </ng-container>
+  
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
